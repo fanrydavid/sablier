@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Sablier</title><link rel="stylesheet" href="dashboard.css"></head>
+<body>
+  <main>
+    <header><div class="brand"><span class="mark">⌛</span><div><h1>Sablier</h1><p>Make room for what matters.</p></div></div><span id="status" class="status"></span></header>
+    <section class="hero">
+      <div class="glass" aria-label="Time balance"><div class="sand top" id="topSand"></div><div class="neck"></div><div class="sand bottom" id="bottomSand"></div></div>
+      <div><p class="eyebrow" id="mode">TODAY'S BALANCE</p><h2 id="balance">--</h2><p id="balanceText">Loading your time...</p><p class="reset">Resets at <strong id="resetLabel">06:00</strong></p></div>
+    </section>
+    <section class="stats"><article><span>Today</span><strong id="todayWithin">--</strong><small>entertainment</small></article><article><span>Today</span><strong id="todayWithout">--</strong><small>other websites</small></article></section>
+    <section class="weekly"><span>This week</span><div class="weekly-values"><strong id="weekWithin">--</strong><small>entertainment</small><strong id="weekWithout">--</strong><small>other websites</small></div><div class="bar"><i id="weekBar"></i></div></section>
+    <section class="settings"><div class="section-title"><div><p class="eyebrow">BOUNDARIES</p><h3>Your websites</h3></div><span id="siteCount">0 sites</span></div><form id="siteForm"><input id="siteInput" placeholder="youtube.com" autocomplete="off"><button>Add site</button></form><ul id="siteList"></ul></section>
+    <section class="settings compact"><div class="section-title"><div><p class="eyebrow">RHYTHM</p><h3>Your rule</h3></div></div><div class="form-grid"><label>Balance ratio <input id="ratioInput" type="number" min="0.1" max="20" step="0.1"></label><label>Daily reset <input id="resetInput" type="time"></label></div><p class="hint">Entertainment is available while other website time × ratio covers it.</p><button id="saveButton" class="secondary">Save settings</button><span id="message" role="status"></span></section>
+  </main><script type="module" src="dashboard.js"></script>
+</body></html>

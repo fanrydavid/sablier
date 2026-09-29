@@ -1,0 +1,14 @@
+{
+  "manifest_version": 3,
+  "name": "Sablier",
+  "version": "0.1.0",
+  "description": "Balance entertainment time with time spent elsewhere on the web.",
+  "permissions": ["alarms", "declarativeNetRequest", "storage", "tabs"],
+  "host_permissions": ["<all_urls>"],
+  "background": { "service_worker": "background.js", "type": "module" },
+  "action": { "default_title": "Sablier", "default_popup": "dashboard.html" },
+  "web_accessible_resources": [{
+    "resources": ["dashboard.html", "dashboard.css", "dashboard.js", "core.js"],
+    "matches": ["<all_urls>"]
+  }]
+}
